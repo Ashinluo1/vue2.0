@@ -1,0 +1,23 @@
+{
+  "name": "vue2.0",
+  "version": "1.0.0",
+  "description": "vue2.0实例",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashinluo1/vue2.0.git"
+  },
+  "author": "Ashinluo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashinluo1/vue2.0/issues"
+  },
+  "homepage": "https://github.com/Ashinluo1/vue2.0#readme"
+}

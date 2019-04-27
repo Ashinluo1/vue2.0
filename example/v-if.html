@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-if v-else v-show</title>
+    <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>v-if&v-else&v-show</h1>
+    <hr>
+    <div id="app">
+        <div v-if="isLogin">你好，欢迎登录</div>
+        <div v-else>请登录后操作</div>
+        <div v-show="isLogin">你好，欢迎登录</div>
+    </div>
+    <script>
+        // 这里我们在vue的data里定义了isLogin的值，当它为true时，网页就会显示：你好：JSPang，如果为false时，就显示请登录后操作。
+        var app =new Vue({
+            el:"#app",
+            data:{
+                isLogin:true
+            }
+        })
+    </script>
+</body>
+</html>
