@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind</title>
+    <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>v-bind 实例</h1>
+    <hr>
+    <div id="app">
+        <img width="200" v-bind:src="imgSrc" alt="">
+        <p><a href="webUrl" target="_blank">跳转新浪</a></p>
+        <div :class="className">1、绑定classA</div>
+        <div :class="{classA:isOk}">2、绑定class中的判断</div>
+        <hr>
+        <div >
+            <input type="checkbox" id="isOk" v-model="isOk">
+            <label for="isOk">isOk={{isOk}}</label>
+        </div>
+        <div :class="[classA,classB]">3、绑定class中的数组</div>
+        <div :class="isOk?classA:classB">4、绑定class中三元运算符</div>
+        <hr>
+        <div :style="{color:hotpink}">5、绑定style</div>
+        <div :style="styleObj">5、绑定style对象</div>
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                imgSrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556390635500&di=d93136427ba17cf5f00362fa9c9deab3&imgtype=0&src=http%3A%2F%2Fwww.hinews.cn%2Fpic%2F0%2F16%2F23%2F97%2F16239735_809930.jpg",
+                webUrl:"",
+                className:'classA',
+                isOk:false,
+                classA:'classA',
+                classB:'classB',
+                hotpink:'hotpink',
+                styleObj:{
+                    color:'green',
+                    fontSize:'24px'
+                }
+            }
+        })
+    </script>
+    <style>
+        .classA{
+            width: 120px;
+            height: 100px;
+            background: red
+        }
+        .classB{
+            color: green;
+        }
+    </style>
+</body>
+</html>
