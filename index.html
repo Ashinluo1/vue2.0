@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue2.0 HelloWrold</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
 </head>
 <body>
     <h1>vue2.0实例</h1>
     <hr>
-    <ol>
-        <li><a href="#"></a> HelloWrold</li>
-    </ol>
+    <div id="app">{{message}}</div>
+    <script>
+        var app =new Vue({
+            el:"#app",
+            data:{
+                message:"HelloWrold!"
+            }
+        })
+    </script>
 </body>
 </html>
