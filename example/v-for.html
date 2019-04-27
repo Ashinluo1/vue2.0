@@ -31,6 +31,7 @@
           ]
         },
         computed: {
+        //   vue低版本中 data里面的items和computed里面可以一样，但是高版本，是不允许相同名称
           sortItems: function() {
             return this.items.sort(sortNumber);
           },
